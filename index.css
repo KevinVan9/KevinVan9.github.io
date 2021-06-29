@@ -17,7 +17,7 @@ body {
     text-overflow: clip; 
     overflow: hidden;
     font-weight: bold;
-    animation: fade 2s ease, grow 1s ease;
+    animation: fade-in 2s ease, grow 1s ease;
     animation-iteration-count: infinite;
     animation-direction: alternate
 }
@@ -27,11 +27,16 @@ body {
 }
 
 .from-left {
-    animation: slideinfromleft 1s ease forwards;
+    animation: slideinfromleft 1s ease;
 }
 
 .from-right {
-    animation: slideinfromright 1s ease forwards;
+    animation: slideinfromright 1s ease;
+}
+
+.change-text:hover:after{
+    animation: fade-in 1s ease;
+    content: ": Secret";
 }
 
 @keyframes grow {
@@ -43,7 +48,7 @@ body {
     }
 }
 
-@keyframes fade {
+@keyframes fade-in {
     from {
         opacity: 0.1;
     }
