@@ -7,46 +7,55 @@
     --background-colour: rgb(23, 23, 23);
 }
 
+::selection {
+    color: red;
+    background: var(--background-colour);
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.63);  
+}
+
 h1 {
     font-family: "Lucida Console", "Courier New", monospace;
     color: var(--heading-colour);
     text-align: center;
-    text-shadow: 2px 2px 5px var(--heading-shadow-colour);
+    text-shadow: 2px 2px 3px var(--heading-shadow-colour);
 }
 
 body {
     background-color: var(--background-colour);
-    font-family: "Lucida Console", "Courier New", monospace;
     color: var(--text-colour);
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-shadow: 2px 2px 3px var(--heading-colour);
     text-align: center;
-    text-shadow: 2px 2px 5px var(--heading-colour);
-    border: solid;
     height: 99vh;
     width: calc(100vw - var(--scrollbar-width));
-    /* display:flex;
-    flex-direction: column; */
-    overflow-x: hidden;
-    /* overflow-y: hidden; */
+    overflow: hidden;
     margin: 0;
+    border: solid;
+    border-width: thick;
 }
 
 #divider {
     text-align: center;
     font-size: 30px;
     text-overflow: clip; 
+    /* user-select: none; */
+
     overflow: hidden;
     animation: fade-in 2s ease, grow 1s ease;
     animation-iteration-count: infinite;
-    animation-direction: alternate
+    animation-direction: alternate;
+    
 }
 
 #index {
     list-style: none;
     padding-left: 0;
     text-align: center;
-    /* border: solid; */
 }
 
+/*
+Remove link formatting
+*/
 a {
     all: unset;
 }
@@ -71,20 +80,6 @@ Animations
     width:fit-content;
     animation: fade-in 1s ease;
     content: ": Secret";
-}
-
-@keyframes blink-shadows
-{
-    from {text-shadow: 2px 2px 5px var(--colour)}
-    to {text-shadow : none;}
-}
-
-@keyframes pop {
-    to {background-color: yellow;}
-}
-
-@keyframes highlight {
-    to {background-color: yellow;}
 }
 
 @keyframes grow {
