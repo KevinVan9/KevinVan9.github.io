@@ -1,0 +1,44 @@
+:root {
+    --heading-colour: rgb(251,126,41);
+    --heading-shadow-colour: rgba(251, 125, 41, 0.61);
+    --auxillary-heading-colour: rgb(255,153,0);
+    --text-colour: rgb(255,153,0);
+    --auxillary-text-colour: rgb(255,153,0);
+    --background-colour: rgb(23, 23, 23);
+    --highlight-colour: red;
+    --highlight-shadow-colour: rgba(255, 0, 0, 0.63);
+}
+
+::selection {
+    color: var(--highlight-colour);
+    background: var(--background-colour);
+    text-shadow: 2px 2px 5px var(--highlight-shadow-colour);
+}
+
+h1 {
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: var(--heading-colour);
+    text-align: center;
+    text-shadow: 2px 2px 3px var(--heading-shadow-colour);
+}
+
+body {
+    background-color: var(--background-colour);
+    color: var(--text-colour);
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-shadow: 2px 2px 3px var(--heading-colour);
+    text-align: center;
+    height: 99vh;
+    width: calc(100vw - var(--scrollbar-width));
+    overflow: hidden;
+    margin: 0;
+    border: solid;
+    border-width: thick;
+}
+
+/*
+Remove link formatting
+*/
+a {
+    all: unset;
+}
