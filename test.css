@@ -1,5 +1,59 @@
-h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    color: blue;
+:root {
+    --heading-colour: rgb(251,126,41);
+    --heading-shadow-colour: rgba(251, 125, 41, 0.61);
+    --auxillary-heading-colour: rgb(255,153,0);
+    --text-colour: rgb(255,153,0);
+    --auxillary-text-colour: rgb(255,153,0);
+    --background-colour: rgb(23, 23, 23);
+    --highlight-colour: red;
+    --highlight-shadow-colour: rgba(255, 0, 0, 0.63);
+    --rotation-time: 2s;
+    --rotation-radius: 100px;
+}
+
+::selection {
+    color: var(--highlight-colour);
+    background: var(--background-colour);
+    text-shadow: 2px 2px 5px var(--highlight-shadow-colour);
+}
+
+body {
+    background-color: var(--background-colour);
+    color: var(--text-colour);
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-shadow: 2px 2px 3px var(--heading-colour);
     text-align: center;
+    height: 99vh;
+    width: calc(100vw - var(--scrollbar-width));
+    overflow: hidden;
+    margin: 0;
+    border: solid;
+    border-width: thick;
+    display: flex;
+    flex-direction: column;
+}
+
+#whirlpool {
+    flex-grow:1;
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+
+.circle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: var(--highlight-colour);
+    animation: rotate var(--rotation-time) infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) translateX(var(--rotation-radius)) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(var(--rotation-radius)) rotate(-360deg);
+    }
 }

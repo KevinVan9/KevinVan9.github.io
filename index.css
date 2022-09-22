@@ -5,12 +5,14 @@
     --text-colour: rgb(255,153,0);
     --auxillary-text-colour: rgb(255,153,0);
     --background-colour: rgb(23, 23, 23);
+    --highlight-colour: red;
+    --highlight-shadow-colour: rgba(255, 0, 0, 0.63);
 }
 
 ::selection {
-    color: red;
+    color: var(--highlight-colour);
     background: var(--background-colour);
-    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.63);  
+    text-shadow: 2px 2px 5px var(--highlight-shadow-colour);
 }
 
 h1 {
