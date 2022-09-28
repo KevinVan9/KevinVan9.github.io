@@ -1,0 +1,67 @@
+:root {
+    --rotation-time1: 28s;
+    --rotation-time2: 1s;
+    --rotation-radius1: 40vmin;
+    --rotation-radius2: 3vmin;
+}
+
+#system {
+    flex-grow:1;
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: var(--highlight-colour);
+}
+
+.sun {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    animation: pulse 10s infinite cubic-bezier(.44,1.99,.46,-1.1);
+}
+
+.earth {
+    animation: earth-orbit var(--rotation-time1) infinite linear;
+    background-color: blue;
+}
+.moon {
+    width: 3px;
+    height: 3px;
+    animation: moon-orbit var(--rotation-time2) infinite linear;
+    background-color: grey;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0px 0px 20px 5px red;
+    }
+    50% {
+        box-shadow: 0px 0px 8px 5px red;
+    }
+    100% {
+        box-shadow: 0px 0px 20px 5px red;
+    }
+}
+
+@keyframes earth-orbit {
+    0% {
+        transform: rotate(0deg) translateX(var(--rotation-radius1));
+    }
+    100% {
+        transform: rotate(360deg) translateX(var(--rotation-radius1));
+    }
+}
+@keyframes moon-orbit {
+    0% {
+        transform: rotate(0deg) translateX(var(--rotation-radius2));
+    }
+    100% {
+        transform: rotate(360deg) translateX(var(--rotation-radius2));
+    }
+}

@@ -1,0 +1,6 @@
+footer {
+    all: unset;
+    font-weight: bold;
+    font-size:70vmin;
+    text-shadow: 4px 4px 6px var(--heading-colour);
+}
