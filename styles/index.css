@@ -1,5 +1,4 @@
 .change-text:hover:after{
-    width:fit-content;
     animation: fade-in 1s ease;
     content: ": Secret";
 }
@@ -17,7 +16,25 @@
     list-style: none;
     padding-left: 0;
     text-align: center;
+    flex:1;
+    scrollbar-width: none; 
 }
+.carousel {
+    display: flex;
+    flex-direction: column;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+.carousel-item {
+    scroll-snap-align: center;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .from-left {
     animation: slideinfromleft 1s ease;
 }
@@ -25,9 +42,14 @@
 .from-right {
     animation: slideinfromright 1s ease;
 }
-#index span:hover{
+#index a:hover {
     font-weight:bolder;
 }
+
+#index::-webkit-scrollbar {
+    display: none;
+}
+
 
 /*
 Animations
