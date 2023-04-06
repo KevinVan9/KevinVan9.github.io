@@ -5,6 +5,10 @@
     --rotation-radius2: 3vmin;
 }
 
+body {
+    background-color: black;
+}
+
 #system {
     flex-grow:1;
     display: grid;
@@ -16,7 +20,7 @@
     width: 10px;
     height: 10px;
     border-radius: 100%;
-    background-color: var(--highlight-colour);
+    background-color: red;
 }
 
 .sun {

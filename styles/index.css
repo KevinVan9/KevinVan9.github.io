@@ -1,3 +1,11 @@
+h1 {
+    font-size: 3vw;
+    font-weight: bold;
+}
+body {
+    font-weight: bold;
+}
+
 .change-text:hover:after{
     animation: fade-in 1s ease;
     content: ": Secret";
@@ -24,15 +32,29 @@
     flex-direction: column;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 .carousel-item {
+    padding-top: 10px;
     scroll-snap-align: center;
-    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 60%;
+    width: 40%;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 20px;
+    background-color: var(--card-background-colour);
+}
+
+.carousel-item:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .from-left {

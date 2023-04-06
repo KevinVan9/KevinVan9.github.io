@@ -1,12 +1,12 @@
 :root {
-    --heading-colour: rgb(251,126,41);
-    --heading-shadow-colour: rgba(251, 125, 41, 0.61);
-    --auxillary-heading-colour: rgb(255,153,0);
-    --text-colour: rgb(255,153,0);
-    --auxillary-text-colour: rgb(255,153,0);
-    --background-colour: rgb(23, 23, 23);
-    --highlight-colour: red;
-    --highlight-shadow-colour: rgba(255, 0, 0, 0.63);
+    --heading-colour: #F77F00;
+    --heading-shadow-colour: #003049;
+    --text-colour: #F77F00;
+    --background-colour: #EAE2B7;
+    /* --background-colour: rgb(23, 23, 23); */
+    --highlight-colour: #003049;
+    --highlight-shadow-colour: #F77F00;
+    --card-background-colour: #FCBF49;
 }
 
 ::selection {
@@ -16,25 +16,26 @@
 }
 
 h1 {
-    font-family: "Lucida Console", "Courier New", monospace;
+    font-family: "Helvetica", "Courier New", monospace;
     color: var(--heading-colour);
     text-align: center;
-    text-shadow: 2px 2px 3px var(--heading-shadow-colour);
+    /* text-shadow: 2px 2px 3px var(--heading-shadow-colour); */
 }
 
 body {
     background-color: var(--background-colour);
     color: var(--text-colour);
-    font-family: "Lucida Console", "Courier New", monospace;
-    text-shadow: 2px 2px 3px var(--heading-colour);
+    font-family: "Helvetica", "Courier New", monospace;
+    /* text-shadow: 2px 2px 3px var(--heading-colour); */
     text-align: center;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
     margin: 0;
     box-sizing: border-box;
+    /* border-color: #023047;
     border: solid;
-    border-width: thick;
+    border-width: thick; */
     display: flex;
     flex-direction: column;
 }
